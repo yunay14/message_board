@@ -36,7 +36,7 @@ public class DestroyServlet extends HttpServlet {
             EntityManager em = DBUtil.createEntityManager();
 
 
-            Message m = em.find(Message.class, (Integer)(request.getSession().getAttribute("messageid")));
+            Message m = em.find(Message.class, (Integer)(request.getSession().getAttribute("message_id")));
 
             em.getTransaction().begin();
             em.remove(m);
